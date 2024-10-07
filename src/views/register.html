@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+    <div class="form-register">
+        <h2>Crear una Cuenta</h2>
+        <form id="registerForm">
+
+            <input type="text" placeholder="Nombre Completo" id="fullName" name="fullName"required>
+            <div class="error-message" id="fullNameError"></div>
+
+            <select id="documentType" name="documentType" required>
+                <option value="CC">Cédula de Ciudadanía</option>
+                <option value="TI">Tarjeta de Identidad</option>
+                <option value="CE">Cédula de Extranjería</option>
+                <option value="PAS">Pasaporte</option>
+            </select>
+
+            
+            <input type="text" placeholder="Número de Documento" id="documentNumber" name="documentNumber" required>
+            <div class="error-message" id="documentNumberError"></div>
+
+            <input type="email" placeholder="Correo Electrónico" id="email" name="email" required>
+            <div class="error-message" id="emailError"></div>
+
+            <input type="password" placeholder="Contraseña" id="password"  name="password" required>
+            <div class="password-strength" id="passwordStrength"></div>
+            <div class="error-message" id="passwordError"></div>
+
+            <input type="password" placeholder="Confirmar Contraseña" id="confirmPassword" name="confirmPassword" required>
+            <div class="error-message" id="confirmPasswordError"></div>
+
+            <div class="form-buttons">
+                <button type="submit">Registrar</button>
+                <a href="/">Iniciar Sesión</a>
+                <a href="/cataloge">Catálogo</a>
+            </div>
+        </form>
+    </div>
+    <script src="/validation.js"></script>
+</body>
+</html>
